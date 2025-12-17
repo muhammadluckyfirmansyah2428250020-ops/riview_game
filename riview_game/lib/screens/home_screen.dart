@@ -8,10 +8,7 @@ class HomeScreen extends StatelessWidget {
   final List<Game> favorites;
   final Function(Game) onFavoriteTap;
 
-  HomeScreen({
-    required this.favorites,
-    required this.onFavoriteTap,
-  });
+  HomeScreen({required this.favorites, required this.onFavoriteTap});
 
   @override
   Widget build(BuildContext context) {
@@ -70,9 +67,7 @@ class HomeScreen extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                    builder: (_) => DetailScreen(game: game),
-                  ),
+                  MaterialPageRoute(builder: (_) => DetailScreen(game: game)),
                 );
               },
             ),
